@@ -1,13 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const app = express();
-const PORT = 3000;
+
+const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.API_KEY || '1ccde7d5327e575ae3330198868f56d9'; // fallback for local dev
 
 app.use(cors());
 app.use(express.json());
-
-const API_KEY = '1ccde7d5327e575ae3330198868f56d9';  
 
 const moodToGenre = {
   happy: '35',      // Comedy
@@ -41,4 +42,4 @@ app.post('/recommend', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
