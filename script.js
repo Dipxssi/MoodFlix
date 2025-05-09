@@ -9,16 +9,20 @@ function getRecommendations() {
 
   fetch('http://localhost:3000/recommend', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ mood })
   })
   .then(response => response.json())
   .then(data => {
-    let html = `<p><strong>Genre:</strong> ${data.genre}</p><ul>`;
-    data.movies.forEach(movie => html += `<li>${movie}</li>`);
-    html += "</ul>";
+    let html = "";
+    data.movies.forEach(movie => {
+      html += `
+        <div class="movie-card">
+          <img src="${movie.poster}" alt="${movie.title}" />
+          <h3>${movie.title}</h3>
+          <p>${movie.overview}</p>
+        </div>`;
+    });
     movieListDiv.innerHTML = html;
   })
   .catch(err => {
