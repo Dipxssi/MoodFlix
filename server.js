@@ -11,10 +11,10 @@ app.use(cors());
 app.use(express.json());
 
 const moodToGenre = {
-  happy: '35',      // Comedy
-  sad: '18',        // Drama
-  angry: '28',      // Action
-  romantic: '10749',// Romance
+  happy: '28,35',      // Comedy
+  sad: '18,10749',        // Drama
+  angry: '27,53',      // Action
+  romantic: '16,10749',// Romance
   bored: '12'       // Adventure
 };
 
