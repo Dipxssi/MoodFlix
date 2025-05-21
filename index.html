@@ -40,13 +40,15 @@
 
     <section class="diagram-section">
   <h2>How MoodFlix Works</h2>
+  <div class="mermaid-container">
   <div class="mermaid">
-    graph TD
-      Mood[User Mood] --> Genre[Genre(s)]
-      Genre --> TMDb[TMDb API]
-      TMDb --> MovieList[Top 5 Movies]
-      MovieList --> UserDisplay[Displayed on Website]
-  </div>
+  graph TD
+    A[User Mood] --> B[Mapped Genres]
+    B --> C[TMDb API Request]
+    C --> D[Top 5 Movies]
+    D --> E[Displayed to User]
+</div>
+<div>
 </section>
 
   </main>

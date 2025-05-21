@@ -165,3 +165,18 @@ header p {
   border-bottom: 1px solid #FF69B4;
   padding-bottom: 0.5rem;
 }
+.diagram-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.mermaid-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mermaid {
+  max-width: 100%;
+}
+
