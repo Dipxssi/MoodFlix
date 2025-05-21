@@ -150,3 +150,18 @@ header p {
     padding: 0.5rem;
   }
 }
+.diagram-section {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #111;
+  border: 1px solid #FF69B4;
+  border-radius: 10px;
+  color: #FF69B4;
+}
+
+.diagram-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #FF69B4;
+  padding-bottom: 0.5rem;
+}

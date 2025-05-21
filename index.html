@@ -12,6 +12,12 @@
     <p>Smart movie suggestions based on your mood</p>
   </header>
 
+  <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+
   <main>
     <section class="quiz-section">
       <h2>How are you feeling today?</h2>
@@ -31,6 +37,18 @@
       <h2>Recommended Movies</h2>
       <div id="movie-list">Your movie list will appear here...</div>
     </section>
+
+    <section class="diagram-section">
+  <h2>How MoodFlix Works</h2>
+  <div class="mermaid">
+    graph TD
+      Mood[User Mood] --> Genre[Genre(s)]
+      Genre --> TMDb[TMDb API]
+      TMDb --> MovieList[Top 5 Movies]
+      MovieList --> UserDisplay[Displayed on Website]
+  </div>
+</section>
+
   </main>
 
   <script src="script.js"></script>
